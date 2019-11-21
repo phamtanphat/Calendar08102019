@@ -81,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnHandle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int day = (int) ((calendarEnd.getTimeInMillis() - calendarStart.getTimeInMillis()) / (24* 60 * 60 * 1000));
+                txtTotalDay.setText("Tổng thời gian : " + day + " ngày");
+            }
+        });
 
     }
 }
